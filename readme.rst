@@ -13,3 +13,5 @@ Call for Proposals website
     ./manage.py migrate
     ./manage.py loaddata fixtures/*
     ./manage.py runserver
+
+    # For testing purposes use the admin interface with user: test and password: test
