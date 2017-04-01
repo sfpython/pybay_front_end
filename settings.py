@@ -16,10 +16,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 #static files
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-    '/static/',
-]
+STATICFILES_DIRS = ['%s/static' % BASE_DIR, '/static/']
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
@@ -61,9 +58,7 @@ ROOT_URLCONF = 'urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            'templates/'
-        ],
+        'DIRS': ['%s/templates/' % BASE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
